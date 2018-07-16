@@ -1,0 +1,73 @@
+@font-face {
+  font-family: digital;
+src:  url(LED.ttf);
+}
+
+*{
+  padding:0;
+  margin:0;
+}
+#body{
+background-color:rgb(242, 111, 111);
+height:600px;
+padding:50px; display: flex;justify-content: center;}
+
+.main{
+    height:500px;
+    width: 400px;
+    background-color: rgb(64, 64, 64);
+    padding:30px;
+}
+
+#show{
+  width:100%;
+  background-color: rgb(0, 105, 88);
+  height: 100px;
+  margin:0;
+}
+ /* for operator and numbers */
+.buttons{
+  display: flex;
+  padding-top: 50px;
+}
+
+.numbers{
+  width: 70%;
+
+  display:flex;
+flex-wrap: wrap;
+justify-content: space-around;
+
+}
+.numbers div{
+  width:30%; background-color: rgb(89, 89, 89);
+height: 60px; border: solid 2px white; border-radius: 6px; padding-top:10px;
+}
+.buttons p{ text-align: center;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.operators{
+  width: 30%;
+
+  padding-left: 20px;
+
+
+}
+
+.operators div{
+  height:45px;border: solid 2px white;background-color:rgb(89,89,89);
+  width:60px; margin-bottom: 15px; margin-left:15px; border-radius: 6px;
+}
+
+#del{background-color:red;}
+#del p{font-size:35px;}
+
+#show p{
+  padding:15px; text-align: right; font-size:65px; font-family: digital; letter-spacing: 3px;overflow: hidden;
+}
+
+.buttons div  :hover{ transform: scale(1.03); }
+.buttons div { transition:300ms ease-in-out;}

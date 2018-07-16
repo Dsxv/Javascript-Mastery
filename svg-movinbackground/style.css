@@ -1,0 +1,50 @@
+@font-face {
+src: url("Respective.ttf");
+font-family: mycursive  ;
+}
+body{
+  background-image: url("bg.jpg");
+  background-size:105%;
+  background-position:-34px -65px  ;
+  transition: all 300ms linear;
+}
+
+*{margin:0; padding:0;}
+
+.main{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width:100vw;
+}
+
+.main>div {
+  height:50%;
+  width:50%;
+}
+
+svg{margin-top: 30vh;margin-left: 10vw;}
+.st0{fill:none;}
+.st1{fill:none;stroke:#fff;stroke-width:2;stroke-miterlimit:10;}
+.st2{font-family:mycursive;}
+.st3{font-size:65px;}
+
+#p2{
+  stroke-dasharray:320;
+  stroke-dashoffset:320;
+  animation:this 8s linear infinite ;
+}
+
+@keyframes this {
+0%{
+  stroke-dashoffset:320;
+}
+50%{
+  stroke-dashoffset:0;
+}
+100%{
+  stroke-dashoffset:320
+}
+}

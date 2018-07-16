@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  src: url("Assassin$.ttf");
+  font-family: assassin;
+}
+
+.main>div {
+  cursor: pointer;
+  transition: flex cubic-bezier(0.68, -0.55, 0.265, 1.55) 1000ms;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 {
+  background-image: url("5.jpg");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+}
+
+.panel2 {
+  background-image: url("2.jpg");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+  background-position: center;
+}
+
+.panel3 {
+  background-image: url("3.jpg");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+  background-position: center;
+}
+
+.panel4 {
+  background-image: url("4.jpg");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+  background-position: center;
+}
+
+.panel5 {
+  background-image: url("1.png");
+  background-size: cover;
+  height: 100%;
+  flex: 1;
+  background-position: 1vw;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.inactive {
+  filter: blur(.5px) grayscale(65%) !important;
+   transition: filter ease-in-out 500ms;
+}
+
+.active {
+  flex: 5 !important;
+}
+
+.main>div>div {
+  flex: 1;
+  font-family: assassin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: text-shadow ease-in-out 500ms;
+}
+
+.main>div {
+  font-size: 4.5em;
+  color: rgba(252, 252, 252, .9);
+  text-shadow: 0px 1px 16px black;
+}
+
+.main>div>div:hover {
+  text-shadow: 0px 1px 16px red;
+}
+
+.panel5>div {
+  margin-left: -250px;
+}
+
+.panel3 {
+  font-size: 4em;
+}

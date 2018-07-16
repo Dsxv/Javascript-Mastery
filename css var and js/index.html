@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+
+    :root{
+      --col : #ff0000;
+      --spacing: 10px;
+      --blur: 2px;
+    }
+    /*styles */
+    .main {
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .main img {
+      height: 70vh;
+      width: 60vw;
+  padding: var(--spacing);
+  filter: blur(var(--blur)) ;
+  background-color: var(--col) ;
+    }
+
+
+    h1 {
+      text-align: center;
+      font-family: monospace;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bolder;
+      margin-bottom: -2vh;
+      margin-top: -3vh;
+    }
+
+    span {
+      font-size: 70px;
+     color: var(--col) ;
+    }
+
+    body {
+      background-color: rgb(104, 97, 116);
+
+    }
+
+    label {
+      font-family: fantasy;
+      color: #fff;
+      margin-left:2vw;
+      margin-top:.5vw;
+
+      letter-spacing: 150%;
+      font-size: 25px;
+    }
+
+     input{margin-right:3vw;}
+    .inps {
+      display: flex;
+      justify-content: center;
+    }
+/*  for input styling */
+    input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 10vw;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 30px;
+    height: 8.4px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  input[type=color]{margin-top:.5vw;}
+
+  </style>
+</head>
+
+<body>
+  <h1>Css Variables with <br> <span>JS</span> </h1>
+
+
+  <div class="inps"><label for="Spacing">Spacing :</label>
+    <input type="range" max=200 min="10" data-sizing="px" name="spacing" val=0>
+    <label for="Blur">Blur :</label>
+    <input type="range" max="25" min="0" data-sizing="px" name="blur" val=0>
+    <label for="color">Color :</label>
+    <input type="color" name="col" data-sizing=" "></div>
+
+  <div class="main"><img src="bg.jpg" alt="someimg"></div>
+
+
+
+  <script type="text/javascript" src="jquery-3.3.1.min.js">
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  var inputs = $("input") ;
+
+  inputs.on("change mousemove",function(){inputs.get().forEach(function(i){
+  var mainval = i.value + i.dataset["sizing"] ;
+    var valu = "--"+i.name ;
+     document.documentElement.style.setProperty(valu, mainval);
+
+  })
+  ;}) ;
+  ;});
+
+
+  </script>
+</body>
+
+</html>

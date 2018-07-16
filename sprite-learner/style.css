@@ -1,0 +1,7 @@
+.animate{
+  background-image: url(sprite.png) ;
+  height: 120px;
+  width: 80px;
+  background-position: 5px 0px;
+  background-repeat: no-repeat;
+}

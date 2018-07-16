@@ -1,0 +1,46 @@
+.body {
+  background-color: rgb(74, 74, 74);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.main {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+.main div {
+  cursor: pointer;
+  height: 180px;
+  width: 180px;
+}
+
+#one, #two, #four, #five, #seven, #eight {
+  border-right: 4px solid rgb(233, 0, 133);
+}
+
+#one, #two, #three, #four, #five, #six {
+  border-bottom: 4px solid rgb(233, 0, 133);
+}
+
+.circle {
+  background-image: url(circle.png);
+  background-size: cover;
+}
+
+.cross {
+  background-image: url(cross1.png);
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.Over h2{ color: white;
+
+}
+
+.Over p { cursor: pointer;}
